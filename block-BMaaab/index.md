@@ -10,15 +10,18 @@ Write code to
 
 - create a database of your country name.
 
-```js
+```mongodb
+use india
 ```
 
 - check list of databases to see newly created database.
 
-```js
+```mongodb
+show dbs
 ```
 
 - check which database you are currently connected to ?
 
-```js
+```mongodb
+db
 ```
