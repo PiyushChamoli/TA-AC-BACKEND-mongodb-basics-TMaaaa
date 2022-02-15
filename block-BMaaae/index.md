@@ -21,5 +21,16 @@ Write code to:-
 Answers:
 ```
 use sports
-
+show dbs
+db.cricket.insertMany(players)
+db.football.insertMany(players)
+db.TT.insertMany(players)
+show collections
+db.TT.renameCollection('tennis')
+db.createCollection('khokho', {capped:true,size:4096,max:3})
+db.khokho.insertMany(players)
+db.khokho.isCapped()
+db.football.remove({})
+db.cricket.drop()
+use test
 ```
