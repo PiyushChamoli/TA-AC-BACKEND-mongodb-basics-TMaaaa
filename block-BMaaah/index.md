@@ -30,17 +30,75 @@ Write code to execute below expressions.
   },
   tags: ['js', 'mongo']
 }
+
+[
+  {
+    title: 'blog 1',
+    details: 'This is blog 1',
+    author: {
+      name: 'user1',
+      email: 'user1@xyz.com',
+      age: '20'
+    },
+    tags: ['bg1', 'mongo']
+  },
+  {
+    title: 'blog 2',
+    details: 'This is blog 2',
+    author: {
+      name: 'user2',
+      email: 'user2@xyz.com',
+      age: '30'
+    },
+    tags: ['bg2', 'mongo']
+  },
+  {
+    title: 'blog 3',
+    details: 'This is blog 3',
+    author: {
+      name: 'user3',
+      email: 'user3@xyz.com',
+      age: '40'
+    },
+    tags: ['bg3', 'mongo']
+  }
+]
 ```
 
 4. Find all the articles using `db.COLLECTION_NAME.find()`
+
+db.articles.find()
+
 5. Find a document using \_id field.
+
+db.articles.findOne({_id:ObjectId("620d0b38a74ab82b5d8c99f2")})
+
+
 6. 1. Find documents using title
+
+db.articles.findOne({title:"blog 1"})
+
 7. 2. Find documents using author's name field.
+
+db.articles.findOne({"author.name":"user1"})
+
+
 8. Find document using a specific tag.
 
+
+
 9. Update title of a document using its \_id field.
+
+db.articles.update({_id:ObjectId("620d0b38a74ab82b5d8c99f2")}, {$set:{title: "blog 1"}})
+
 10. Update a author's name using article's title.
+
+db.articles.update({title:"blog 2"}, {$set:{"author.name":"piyush"}})
+
 11. rename details field to description from all articles in articles collection.
+
+
+
 12. Add additional tag in a specific document.
 
 13. Update an article's title using $set and without $set.
